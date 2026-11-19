@@ -1,0 +1,50 @@
+<resources>
+
+    <style name="Theme.Calculator" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">#81D4FA</item>
+        <item name="colorAccent">#81D4FA</item>
+    </style>
+
+    <style name="CalcRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="CalcButton" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:stateListAnimator">@null</item>
+
+    </style>
+
+    <style name="CalcButton.Number">
+        <item name="android:background">#313131</item>
+    </style>
+
+    <style name="CalcButton.Function">
+        <item name="android:background">#525252</item>
+        <item name="android:textColor">#ADD8E6</item>
+    </style>
+
+    <style name="CalcButton.Operator">
+        <item name="android:background">#717070</item>
+        <item name="android:textColor">#00FFFF</item>
+    </style>
+
+    <style name="CalcButton.Equals">
+        <item name="android:background">#03A9F4</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="CalcButton.Point">
+        <item name="android:background">#717070</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+</resources>
