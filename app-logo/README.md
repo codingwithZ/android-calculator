@@ -25,7 +25,15 @@ Using the Exported Logo in Android Studio
 6. Delete the line or attribute with android:ic_launcher_background and change "ic_launcher_foreground" inside the "" to "@drawable/app_logo".
 7. Open ic_launcher_round.xml inside mipmap then ic_launcher and repeat the same change so it also points to "@drawable/app_logo".
 
-# Or copy this code and paste it both inside the ic_launcher.xml and ic_launcher_round.xml
+Or copy this code and paste it both inside the ic_launcher.xml and ic_launcher_round.xml
+
+```java
+<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <foreground android:drawable="@drawable/app_logo" />
+    <monochrome android:drawable="@drawable/app_logo" />
+</adaptive-icon>
+```
 
 <?xml version="1.0" encoding="utf-8"?>
 <adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
