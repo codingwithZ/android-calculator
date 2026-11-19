@@ -13,7 +13,7 @@ Steps to Make the Logo in Figma
 
 Using the Exported Logo in Android Studio
 1. Open the Project panel on the left and go to app then res then drawable or mipmap.
-2. Paste your exported PNG file into the folder and give it a lowercase name with underscores such as app_logo.png.
+2. Paste your exported PNG file into the folder and give it a lowercase name with underscores such as ```app_logo.png```.
 3. Reference the logo in your layout XML or splash screen using the file name without the extension.
 
 # Importing the Exported PNG Logo
