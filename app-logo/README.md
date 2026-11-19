@@ -8,7 +8,7 @@ Do not use AI to make your own logo.
 Steps to Make the Logo in Figma
 1. Open Figma and create a new design file.
 2. Create a square frame such as 512 by 512 so your logo stays crisp when scaled down. Or click F on your keyboard and draw your Frame.
-3. Build your icon shape using basic shapes or vector tools and keep details clean so they stay readable on small screens.
+3. Build your icon shape using basic shapes or vector tools and keep details clean so they stay readable on small screens or go to ````https://www.svgrepo.com/```` this website is completely free.
 4. Select your logo frame or group and export it as 4x PNG.
 
 Using the Exported Logo in Android Studio
