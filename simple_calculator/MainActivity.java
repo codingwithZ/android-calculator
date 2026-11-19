@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
                     onDigit(((Button) v).getText().toString()));
         }
 
+        findViewById(R.id.btnDecimal).setOnClickListener(v -> onDecimal());
+
         int[] operatorIds = {
                 R.id.btnAdd, R.id.btnSubtract, R.id.btnMultiply, R.id.btnDivide
         };
@@ -65,9 +67,22 @@ public class MainActivity extends AppCompatActivity {
         updateDisplay();
     }
 
+    private void onDecimal() {
+        if (justEvaluated) {
+            resetState();
+        }
+        if (input.isEmpty()) {
+            input = "0.";
+        } else if (!input.contains(".") &&
+                input.replace("-", "").length() < MainActivity.MAX_DIGITS) {
+            input += ".";
+        }
+        updateDisplay();
+    }
+
     private void onOperator(String newOp) {
         if (!input.isEmpty()) {
-            double value = Double.parseDouble(input);
+            double value = parseInput(input);
             if (first == null) {
                 first = value;
             } else if (op != null) {
@@ -89,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
     private void onEquals() {
         if (first == null || op == null || input.isEmpty()) return;
 
-        double second = Double.parseDouble(input);
+        double second = parseInput(input);
         if (op.equals("÷") && second == 0) {
             showError();
             return;
@@ -135,6 +150,16 @@ public class MainActivity extends AppCompatActivity {
         updateDisplay();
     }
 
+    private double parseInput(String raw) {
+        if (raw.endsWith(".")) {
+            raw = raw.substring(0, raw.length() - 1);
+        }
+        if (raw.isEmpty() || raw.equals("-")) {
+            return 0.0;
+        }
+        return Double.parseDouble(raw);
+    }
+
     private double calculate(double a, double b, String operator) {
         switch (operator) {
             case "+": return a + b;
@@ -177,8 +202,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
-
     private String format(double value) {
         if (value == Math.rint(value) && Math.abs(value) < 1e15) {
             return String.valueOf((long) value);
@@ -189,6 +212,3 @@ public class MainActivity extends AppCompatActivity {
                 .toPlainString();
     }
 }
-
-
-
