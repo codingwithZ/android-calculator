@@ -24,8 +24,8 @@ Steps to Make the Logo in Figma
 3. Delete both `ic_launcher_background.xml` and `ic_launcher_foreground.xml` from res/drawable if they are there.
 4. Right-click your PNG file in drawable select Refactor then Rename and rename it to `app_logo` so the file becomes `app_logo.png`.
 5. Go to res > mipmap > ic_launcher > open `ic_launcher.xml`.
-6. Delete the line or attribute with android:ic_launcher_background and change "ic_launcher_foreground" inside the "" to "@drawable/app_logo".
-7. Open ic_launcher_round.xml inside mipmap then ic_launcher and repeat the same change so it also points to "@drawable/app_logo".
+6. Delete the line or attribute with "android:ic_launcher_background" and change "ic_launcher_foreground" inside the "" to "@drawable/app_logo".
+7. Open `ic_launcher_round.xml` inside mipmap then `ic_launcher` and repeat the same change so it also points to `"@drawable/app_logo"`.
 
 Or copy this code and paste it both inside the `ic_launcher.xml` and `ic_launcher_round.xml`.
 
